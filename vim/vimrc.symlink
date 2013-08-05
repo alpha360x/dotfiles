@@ -1,4 +1,53 @@
-syntax on
+set nocompatible               
+filetype off                   
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" require lua
+Bundle 'Shougo/neocomplete.vim'
+let g:neocomplete#enable_at_startup = 1
+
+" require ruby, after download run
+" cd ~/.vim/ruby/command-t
+" ruby extconf.rb
+" make
+Bundle 'wincent/Command-T'
+
+Bundle 'tomasr/molokai'
+colorscheme molokai
+set t_Co=256
+
+Bundle 'tpope/vim-fugitive'
+
+" require exuberant-ctags 
+Bundle 'majutsushi/tagbar'
+
+" require clang
+Bundle 'scrooloose/syntastic'
+let g:syntastic_c_checkers=['clang']
+
+Bundle 'bling/vim-airline'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_linecolumn_prefix = '¶ '
+let g:airline_branch_prefix = '⎇ '
+let g:airline_paste_symbol = '∥'
+let g:airline_enable_branch = 1
+let g:airline_enable_syntastic = 1
+let g:airline_detect_modified=1
+set laststatus=2
+
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+set number
+syntax on
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+
