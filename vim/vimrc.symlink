@@ -16,15 +16,30 @@ let g:neocomplete#enable_at_startup = 1
 " make
 Bundle 'wincent/Command-T'
 
+Bundle 'mhinz/vim-startify'
+let g:startify_custom_header = [
+    \'      __       ____    ______  __   ____        ____    _____   __     ', 
+    \'     /\ \     /\  _`\ /\__  _\/\ \ /\  _`\     /\  _`\ /\  __`\/\ \    ',
+    \'     \ \ \    \ \ \L\_\/_/\ \/\ \/ \ \,\L\_\   \ \ \L\_\ \ \/\ \ \ \   ',
+    \'      \ \ \  __\ \  _\L  \ \ \ \/   \/_\__ \    \ \ \L_L\ \ \ \ \ \ \  ',
+    \'       \ \ \L\ \\ \ \L\ \ \ \ \       /\ \L\ \   \ \ \/, \ \ \_\ \ \_\ ',
+    \'        \ \____/ \ \____/  \ \_\      \ `\____\   \ \____/\ \_____\/\_\',
+    \'         \/___/   \/___/    \/_/       \/_____/    \/___/  \/_____/\/_/',
+    \'                                                                          ',
+    \'']
+
 Bundle 'tomasr/molokai'
 colorscheme molokai
 set t_Co=256
+
+Bundle 'vim-scripts/EasyMotion'
 
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/FuzzyFinder'
 map <Leader>b :FufBuffer<CR>
 
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
 Bundle 'kchmck/vim-coffee-script'
 
 " require exuberant-ctags 
@@ -60,6 +75,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+autocmd FileType javascript,css,sass set shiftwidth=2
 autocmd FileType html,coffee,php,html.twig set shiftwidth=2
 
 
